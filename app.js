@@ -13,6 +13,7 @@ app.use(express.json());
 connectDB();
 const ElasticEmail = require('@elasticemail/elasticemail-client');
 var api = new ElasticEmail.CampaignsApi()
+app.get('/', (req, res) => res.send('Insurance-Server-App-is-running!'));
 app.post('/api/register', async (req, res) => {
     console.log(req?.body)
     try {
