@@ -100,11 +100,12 @@ const gmailSender = async (to, subject, name, planName, planDate, hospital) => {
         subject,
         html
     };
+    console.log("Email Status============>", mailOptions);
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log("Error", error);
+            console.log("error============>", error);
         } else {
-            return true
+            console.log("success============>");
         }
     });
 }
@@ -326,7 +327,6 @@ app.post('/api/insurance/add', async (req, res) => {
             amount,
             signature
         });
-        console.log("req.body", req.body)
         const patientDetails = await User.findById(patient);
         const planDetails = await Plans.findById(plan);
         const hospitalDetails = await Hospital.findById(hospital);
