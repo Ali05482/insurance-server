@@ -20,85 +20,85 @@ const gmailSender = async (to, subject, name, planName, planDate, hospital) => {
             pass: "wlyr zsrr ufgm aahg",
         }
     });
-    const html = `
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insurance Plan Availed Confirmation</title>
-<style>
-    /* Reset styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-    }
-    .container {
-        max-width: 600px;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-        color: #333;
-        text-align: center;
-    }
-    p {
-        margin-bottom: 20px;
-        color: #666;
-    }
-    .button {
-        display: inline-block;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    .button:hover {
-        background-color: #0056b3;
-    }
-</style>
-</head>
-<body>
-    <div class="container">
-        <h1>Insurance Plan Availed Confirmation</h1>
-        <p>Dear ${name},</p>
-        <p>We are pleased to inform you that your request for availing the insurance plan at ${hospital} has been successfully processed.</p>
-        <p>Your insurance plan details are as follows:</p>
-        <ul>
-            <li>Plan Name: ${planName}</li>
-            <li>Effective Date: ${planDate}</li>
-            <li>Policy Number: ${4554548}</li>
-        </ul>
-        <p>For any queries or assistance, please feel free to contact our customer support.</p>
-        <p>Thank you for choosing ${hospital} for your healthcare needs.</p>
-        <p>Sincerely,<br> Abdul Rehman<br> Developer</p>
-        <ul>
-            <li>Plan Name: ${planName}</li>
-            <li>Effective Date: ${planDate}</li>
-            <li>Policy Number: ${4554548}</li>
-        </ul>
-        <div style="text-align: center;">
-            <a href="" class="button">Visit Our Website</a>
-        </div>
-    </div>
-</body>
-</html>
+//     const html = `
+//     <!DOCTYPE html>
+// <html lang="en">
+// <head>
+// <meta charset="UTF-8">
+// <meta name="viewport" content="width=device-width, initial-scale=1.0">
+// <title>Insurance Plan Availed Confirmation</title>
+// <style>
+//     /* Reset styles */
+//     body, html {
+//         margin: 0;
+//         padding: 0;
+//     }
+//     body {
+//         font-family: Arial, sans-serif;
+//         background-color: #f4f4f4;
+//     }
+//     .container {
+//         max-width: 600px;
+//         margin: 20px auto;
+//         background-color: #fff;
+//         padding: 20px;
+//         border-radius: 5px;
+//         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//     }
+//     h1 {
+//         color: #333;
+//         text-align: center;
+//     }
+//     p {
+//         margin-bottom: 20px;
+//         color: #666;
+//     }
+//     .button {
+//         display: inline-block;
+//         background-color: #007bff;
+//         color: #fff;
+//         padding: 10px 20px;
+//         text-decoration: none;
+//         border-radius: 5px;
+//     }
+//     .button:hover {
+//         background-color: #0056b3;
+//     }
+// </style>
+// </head>
+// <body>
+//     <div class="container">
+//         <h1>Insurance Plan Availed Confirmation</h1>
+//         <p>Dear ${name},</p>
+//         <p>We are pleased to inform you that your request for availing the insurance plan at ${hospital} has been successfully processed.</p>
+//         <p>Your insurance plan details are as follows:</p>
+//         <ul>
+//             <li>Plan Name: ${planName}</li>
+//             <li>Effective Date: ${planDate}</li>
+//             <li>Policy Number: ${4554548}</li>
+//         </ul>
+//         <p>For any queries or assistance, please feel free to contact our customer support.</p>
+//         <p>Thank you for choosing ${hospital} for your healthcare needs.</p>
+//         <p>Sincerely,<br> Abdul Rehman<br> Developer</p>
+//         <ul>
+//             <li>Plan Name: ${planName}</li>
+//             <li>Effective Date: ${planDate}</li>
+//             <li>Policy Number: ${4554548}</li>
+//         </ul>
+//         <div style="text-align: center;">
+//             <a href="" class="button">Visit Our Website</a>
+//         </div>
+//     </div>
+// </body>
+// </html>
 
     
-    `;
+//     `;
     const mailOptions = {
         from: "noreplay.sss.groups@gmail.com",
         to,
         subject,
-        html
+        html:"asdd"
     };
     console.log("Email Status============>", mailOptions);
     transporter.sendMail(mailOptions, (error, info) => {
