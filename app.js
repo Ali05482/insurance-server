@@ -7,19 +7,18 @@ const Hospital = require('./models/hospital');
 const nodemailer = require('nodemailer');
 const PatientInsurance = require('./models/patientInsurance');
 const connectDB = require('./config');
-const port = 6001;
+const port = 4001;
 const cors = require('cors');
 app.use(cors({ origin: '*' }));
 app.use(express.json());
 connectDB();
 const gmailSender = async (to, subject, name, planName, planDate, hospital) => {
     const transporter = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
+        service: 'gmail',
         auth: {
-            user: "f1ac17309fbdf9",
-            pass: "2606721c795dfc"
-          }
+            user: "noreplay.sss.groups@gmail.com",
+            pass: "wlyr zsrr ufgm aahg",
+        }
     });
     const html = `
     <!DOCTYPE html>
@@ -96,7 +95,7 @@ const gmailSender = async (to, subject, name, planName, planDate, hospital) => {
     
     `;
     const mailOptions = {
-        from: "sandbox.smtp.mailtrap.io",
+        from: "noreplay.sss.groups@gmail.com",
         to,
         subject,
         html
